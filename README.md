@@ -19,7 +19,7 @@ The goal was not only to build a predictive model, but also to follow a structur
 
 The final model selected for this project was a tuned Gradient Boosting Regressor.
 
-\---
+---
 
 ## Dataset
 
@@ -99,7 +99,7 @@ Several new features were created to improve model performance.
 TotalSF = TotalBsmtSF + 1stFlrSF + 2ndFlrSF
 HouseAge = YrSold - YearBuilt
 RemodAge = YrSold - YearRemodAdd
-TotalBath = FullBath + 0.5 \* HalfBath + BsmtFullBath + 0.5 \* BsmtHalfBath
+TotalBath = FullBath + 0.5 * HalfBath + BsmtFullBath + 0.5 * BsmtHalfBath
 ```
 
 These engineered features were designed to capture:
@@ -149,10 +149,10 @@ The final selected model was:
 
 ```python
 GradientBoostingRegressor(
-    n\_estimators=300,
-    learning\_rate=0.05,
-    max\_depth=4,
-    random\_state=42
+    n_estimators=300,
+    learning_rate=0.05,
+    max_depth=4,
+    random_state=42
 )
 ```
 
