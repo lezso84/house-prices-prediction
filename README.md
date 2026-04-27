@@ -121,11 +121,11 @@ This significantly improved model performance, especially for the linear regress
 
 The models were evaluated using the following metrics:
 
-|Metric|Meaning|
-|-|-|
-|R²|Measures how much of the variance in house prices is explained by the model|
-|MAE|Mean Absolute Error; average absolute prediction error|
-|RMSE|Root Mean Squared Error; penalizes large prediction errors more strongly|
+| Metric | Meaning |
+|---|---|
+| R² | Measures how much of the variance in house prices is explained by the model |
+| MAE | Mean Absolute Error; average absolute prediction error |
+| RMSE | Root Mean Squared Error; penalizes large prediction errors more strongly |
 
 For final model selection, RMSE was especially important because large pricing errors are more costly in a real estate context.
 
@@ -133,15 +133,15 @@ For final model selection, RMSE was especially important because large pricing e
 
 Several models were tested and compared.
 
-|Model|R² Original Scale|MAE|RMSE|Notes|
-|-|-:|-:|-:|-|
-|Untuned Decision Tree|0.7287|26,696|38,712|Severe overfitting|
-|Tuned Decision Tree|0.8116|23,017|32,257|Improved, but still weak|
-|Random Forest|0.8682|18,560|26,983|Stronger ensemble model|
-|Log-Target Linear Regression|0.8824|18,411|25,490|Very strong baseline|
-|Base Gradient Boosting|0.8956|17,336|24,012|New best model|
-|Tuned Gradient Boosting|0.9009|16,804|23,402|Final selected model|
-|Regularized XGBoost|0.9098|16,976|26,307|Higher R², but worse RMSE|
+| Model | R² Original Scale | MAE | RMSE | Notes |
+|---|---:|---:|---:|---|
+| Untuned Decision Tree | 0.7287 | 26,696 | 38,712 | Severe overfitting |
+| Tuned Decision Tree | 0.8116 | 23,017 | 32,257 | Improved, but still weak |
+| Random Forest | 0.8682 | 18,560 | 26,983 | Stronger ensemble model |
+| Log-Target Linear Regression | 0.8824 | 18,411 | 25,490 | Very strong baseline |
+| Base Gradient Boosting | 0.8956 | 17,336 | 24,012 | New best model |
+| Tuned Gradient Boosting | 0.9009 | 16,804 | 23,402 | Final selected model |
+| Regularized XGBoost | 0.9098 | 16,976 | 26,307 | Higher R², but worse RMSE |
 
 ## Final Model
 
@@ -158,13 +158,13 @@ GradientBoostingRegressor(
 
 Final performance:
 
-|Metric|Value|
-|-|-:|
-|Train R² on log target|0.9652|
-|Test R² on log target|0.8696|
-|Test R² on original price scale|0.9009|
-|MAE|16,804|
-|RMSE|23,402|
+| Metric | Value |
+|---|---:|
+| Train R² on log target | 0.9652 |
+| Test R² on log target | 0.8696 |
+| Test R² on original price scale | 0.9009 |
+| MAE | 16,804 |
+| RMSE | 23,402 |
 
 ## Why Gradient Boosting Was Selected
 
